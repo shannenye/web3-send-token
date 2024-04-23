@@ -5,9 +5,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--vanta-black);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --vanta-black: #09090b;
+  --black: #1a1a1c;
+  --white: #f8f8fb;
+  --gray: #b4b4b7;
+  --dark-gray: #58585b;
+  --smoke-gray: #3a3a3c;
+  --blue: #56a3f9;
+  --light-blue: #91d1ff;
+  --error-red: #d84f49;
+  --green: #afffaf;
+}
+
+form {
+  font-size: 14px;
+}
+
+label {
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--white);
+}
+
+
+/* --------------------------------------- */
+/* Default styles for inputs across browswers */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* --------------------------------------- */
+
+input {
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  height: 56px;
+  border: 1px solid var(--smoke-gray);
+  background: var(--smoke-gray);
+  line-height: 22px;
+  color: var(--white);
+  border-radius: 8px;
+  cursor: text;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: transparent;
+}
+
+input.error:focus {
+  border: 1px solid var(--error-red);
+}
+
+label.required:after {
+  content: "*";
+  color: var(--error-red);
+  margin-left: 2px;
+}
+
+button {
+  cursor: pointer;
 }

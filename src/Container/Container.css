@@ -1,0 +1,5 @@
+.container {
+  background: var(--vanta-black);
+  height: 100%;
+  width: 100%;
+}
